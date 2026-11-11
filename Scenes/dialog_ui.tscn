@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://bx0x65an2g8lt"]
+
+[ext_resource type="Script" uid="uid://broqosqxs2h5o" path="res://Scripts/dialog_control.gd" id="1_2bocx"]
+[ext_resource type="FontFile" uid="uid://uqwtm8g4fa4r" path="res://Assets/Fonts/AppleGaramond.ttf" id="2_5t5tq"]
+[ext_resource type="Texture2D" uid="uid://dnc8xnur7abuw" path="res://Assets/2DAssets/marco.png" id="2_oa70m"]
+[ext_resource type="FontFile" uid="uid://bwq11ebfektlf" path="res://Assets/Fonts/AppleGaramond-Bold.ttf" id="3_t33e6"]
+[ext_resource type="FontFile" uid="uid://duhe1didsud5j" path="res://Assets/Fonts/AppleGaramond-BoldItalic.ttf" id="4_oa70m"]
+[ext_resource type="FontFile" uid="uid://dqmqebugjx0jv" path="res://Assets/Fonts/AppleGaramond-Italic.ttf" id="5_bpxmn"]
+[ext_resource type="PackedScene" uid="uid://dx0tljjebubr6" path="res://Scenes/opcion_1.tscn" id="6_t33e6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t33e6"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.7294118)
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5t5tq"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_right = 35
+corner_detail = 5
+
+[node name="DialogControl" type="Control" unique_id=1637933777]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_2bocx")
+
+[node name="DialogBox" type="PanelContainer" parent="." unique_id=247643651]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -226.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_t33e6")
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogBox" unique_id=1973013008]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Sprite2D" type="Sprite2D" parent="DialogBox/MarginContainer" unique_id=1310172795]
+position = Vector2(958, 166)
+texture = ExtResource("2_oa70m")
+
+[node name="DialogLine" type="RichTextLabel" parent="DialogBox/MarginContainer" unique_id=811679279]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(0.6737255, 0, 0.078736655, 0.8)
+theme_override_fonts/normal_font = ExtResource("2_5t5tq")
+theme_override_fonts/bold_font = ExtResource("3_t33e6")
+theme_override_fonts/bold_italics_font = ExtResource("4_oa70m")
+theme_override_fonts/italics_font = ExtResource("5_bpxmn")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/mono_font_size = 40
+text = "ñpresdfasfadvnadvlo"
+tab_size = 5
+
+[node name="SpeakerName" type="PanelContainer" parent="." unique_id=1981695599]
+layout_mode = 0
+offset_top = 803.0
+offset_right = 264.0
+offset_bottom = 854.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5t5tq")
+
+[node name="MarginContainer" type="MarginContainer" parent="SpeakerName" unique_id=1396314213]
+layout_mode = 2
+theme_override_constants/margin_left = 60
+
+[node name="SpeakerName" type="Label" parent="SpeakerName/MarginContainer" unique_id=1651728378]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_t33e6")
+theme_override_font_sizes/font_size = 45
+text = "prueba..."
+
+[node name="Control" type="Control" parent="." unique_id=308993080]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1152.0
+offset_top = -648.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Polygon2D" type="Polygon2D" parent="Control" unique_id=261851211]
+visible = false
+position = Vector2(1118.0001, 614.00006)
+scale = Vector2(0.42, 0.42)
+polygon = PackedVector2Array(0, 0, 50, 25, 0, 50)
+
+[node name="Opciones" type="HBoxContainer" parent="." unique_id=380226475]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -39.5
+offset_top = -117.0
+offset_right = 39.5
+offset_bottom = -77.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 70
+
+[node name="MarginContainer" type="MarginContainer" parent="Opciones" unique_id=1642665099]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="opcion1" parent="Opciones/MarginContainer" unique_id=1022170921 instance=ExtResource("6_t33e6")]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 35

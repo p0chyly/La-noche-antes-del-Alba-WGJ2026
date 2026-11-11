@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://blkchumhlo6f"]
+
+[ext_resource type="PackedScene" uid="uid://bx0x65an2g8lt" path="res://Scenes/dialog_ui.tscn" id="1_h86jn"]
+[ext_resource type="Script" uid="uid://cf28jjbf4tblj" path="res://Scripts/main_2d.gd" id="1_s5pa2"]
+[ext_resource type="PackedScene" uid="uid://bpc3j1w1h424e" path="res://Scenes/personaje.tscn" id="2_6ly7s"]
+[ext_resource type="Texture2D" uid="uid://tmv5tk2ybixy" path="res://Assets/2DAssets/Escenas2d/1.png" id="2_n0o4r"]
+[ext_resource type="Script" uid="uid://lbd306qg0dfe" path="res://Scripts/personaje.gd" id="3_6b7vk"]
+[ext_resource type="FontFile" uid="uid://bwq11ebfektlf" path="res://Assets/Fonts/AppleGaramond-Bold.ttf" id="3_jk2p8"]
+
+[node name="Main2d" type="Node2D" unique_id=1923958435]
+script = ExtResource("1_s5pa2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1628545297]
+layer = -1
+
+[node name="Fondo" type="TextureRect" parent="CanvasLayer" unique_id=714075740]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_n0o4r")
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1653652852]
+
+[node name="Pausa" type="Button" parent="CanvasLayer2" unique_id=1254807465]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -157.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 79.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_jk2p8")
+theme_override_font_sizes/font_size = 45
+text = " Esc      "
+
+[node name="Polygon2D" type="Polygon2D" parent="CanvasLayer2/Pausa" unique_id=26847595]
+position = Vector2(93.99999, 14.000002)
+scale = Vector2(0.68896115, 0.68896115)
+polygon = PackedVector2Array(0, 0, 50, 25, 0, 50)
+
+[node name="Control" type="Control" parent="CanvasLayer2" unique_id=1700481517]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Character" parent="CanvasLayer2/Control" unique_id=1293556240 instance=ExtResource("2_6ly7s")]
+unique_name_in_owner = true
+position = Vector2(70, -298.0001)
+scale = Vector2(0.5426855, 0.6451978)
+script = ExtResource("3_6b7vk")
+
+[node name="DialogUI" parent="CanvasLayer2" unique_id=1637933777 instance=ExtResource("1_h86jn")]
+unique_name_in_owner = true

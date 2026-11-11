@@ -1,0 +1,363 @@
+[	
+		{"background": "res://Assets/2DAssets/Escenas2d/1.png"},
+	{"speaker": "Narradora", "text": "..."},
+	{"speaker": "Alba", "text": "Otro día, otro desayuno."},
+		{"background": "res://Assets/2DAssets/Escenas2d/2.png"},
+	{"speaker": "Narradora", "text": "Alba se levanta y va a la cocina, su mamá ya está ahí y la saluda. Revisa los estantes."},
+		{"background": "res://Assets/2DAssets/Escenas2d/3.png"},
+	{"speaker": "Madre", "text": "Buenos días, Alba."},
+	{"speaker": "Alba", "text": "Buenos días, mamá."},
+		{"background": "res://Assets/2DAssets/Escenas2d/3.png"},
+		{"background": "res://Assets/2DAssets/Escenas2d/4.png"},
+	{"speaker": "Alba", "text": "Mmm, solo queda café para uno."},
+		{"background": "res://Assets/2DAssets/Escenas2d/5.png"},
+	{"speaker": "Narradora", "text": "Alba lo observa, pero igual toma el café."},
+		{"background": "res://Assets/2DAssets/Escenas2d/6.png"},
+	{"speaker": "Narradora", "text": "Y se lo prepara."},
+		{"background": "res://Assets/2DAssets/Escenas2d/8.png"},
+	{"speaker": "Narradora", "text": "Llegan su hermano y su padre."},
+	{"speaker": "Narradora", "text": "Su hermano, Tito, se sientra frente a ella en la mesa."},
+		{"background": "res://Assets/2DAssets/Escenas2d/9.png"},
+	{"speaker": "Narradora", "text": "Su padre, pasa caminando apurado."},
+		{"background": "res://Assets/2DAssets/Escenas2d/10.png"},
+	{"speaker": "Padre", "text": "¿Y el café, mujer?"},
+		{"background": "res://Assets/2DAssets/Escenas2d/11.png"},
+	{"speaker": "Madre", "text": "No hay más. Se lo hizo la nena, recién."},
+		{"background": "res://Assets/2DAssets/Escenas2d/12.png"},
+	{"speaker": "Padre", "text": "No hay más café, dale ese a tu hermano."},
+		{"background": "res://Assets/2DAssets/Escenas2d/13.png"},
+	{"choices":
+		[
+		{"text": "Dar café", "goto": "Dar café"},
+		{"text": "Tomar café", "goto": "Tomar café", "set_flags": {"discusion1": false}}
+		],
+	},
+	
+	{"anchor": "Dar café"},
+		{"background": "res://Assets/2DAssets/Escenas2d/14.png"},
+	{"speaker": "Narradora", "text": "Alba le entrega el café."},
+		{"background": "res://Assets/2DAssets/Escenas2d/15.png"},
+	{"speaker": "Narradora", "text": "El padre lo toma, se lo da a su hermano, y luego se aleja."},
+		{"background": "res://Assets/2DAssets/Escenas2d/16.png"},
+	{"speaker": "Narradora", "text": "Su hermano, al verla, le ofrece la taza de vuelta."},
+	{"speaker": "Tito", "text": "Tomá, era tu taza."},
+	{"choices":
+		[
+		{"text": "Aceptar café", "goto": "Aceptar café", "set_flags": {"discusion1": true}},
+		{"text": "Rechazarlo", "goto": "Rechazarlo", "set_flags": {"discusion1": false}}
+		],
+	},
+	
+	{"anchor": "Aceptar café"},
+		{"background": "res://Assets/2DAssets/Escenas2d/17.png"},
+	{"speaker": "Alba", "text": "Gracias."},
+	{"speaker": "Narradora", "text": "El padre regresa."},
+		{"background": "res://Assets/2DAssets/Escenas2d/18.png"},
+	{"speaker": "Padre", "text": "¡Ey, te dije que el café era para él!"},
+	{"speaker": "Alba", "text": "Pero yo me lo hice…"},
+	{"speaker": "Padre", "text": "¡Pero nada!, ¡Dale el café!"},
+		{"background": "res://Assets/2DAssets/Escenas2d/15.png"},
+	{"speaker": "Narradora", "text": "El padre toma la taza y se la devuelve a Tito."},
+	{"goto": "escena2"},
+	
+	{"anchor": "Rechazarlo"},
+		{"background": "res://Assets/2DAssets/Escenas2d/19.png"},
+	{"speaker": "Alba", "text": "No, gracias, papá dijo que era para vos."},
+		{"background": "res://Assets/2DAssets/Escenas2d/20.png"},
+	{"speaker": "Narradora", "text": "El padre entra, ve el café en manos del hermano y no dice nada más sobre el tema."},
+	{"goto": "escena2"},
+	
+	{"anchor": "Tomar café"},
+		{"background": "res://Assets/2DAssets/Escenas2d/15.png"},
+	{"speaker": "Narradora", "text": "Alba intenta quedarse el cafe, pero su padre se lo saca y se lo da a su hermano."},
+	
+	{"anchor": "escena2"},
+		{"background": "res://Assets/2DAssets/Escenas2d/18.png"},
+	{"speaker": "Padre", "text": "Vamos a la carpintería, toca que te prepares para trabajar."},
+	{"choices":
+		[
+		{"text": "No decir nada", "set_flags": {"discusion2": false}, "goto": "No decir nada"},
+		{"text": "Preguntar para ir", "goto": "Preguntar para ir", "set_flags": {"discusion2": true}}
+		],
+	},
+	
+	{"anchor": "No decir nada"},
+	{"background": "res://Assets/2DAssets/Escenas2d/19.png"},
+	{"speaker": "Alba", "text": "..."},
+	{"choices":
+		[
+		{"text": "Ir a lavar los platos", "goto": "Condicional1"},
+		],
+	},
+	
+	{"anchor": "Preguntar para ir"},
+		{"background": "res://Assets/2DAssets/Escenas2d/17.png"},
+	{"speaker": "Alba", "text": "¿Puedo ir con ustedes?"},
+		{"background": "res://Assets/2DAssets/Escenas2d/18.png"},
+	{"speaker": "Padre", "text": "¿Y qué vas a hacer allá? No hay platos para lavar… Mejor te quedás."},
+	{"choices":
+		[
+		{"text": "Ir a lavar los platos", "goto": "Condicional1"},
+		],
+	},
+
+	{"anchor": "Condicional1", 
+	"conditions": [
+		{"if": {"discusion1": true, "discusion2": true}, "goto": "LavarLosPlatos1"}
+	],
+		"default": "LavarLosPlatos2"
+	},
+	
+	{"anchor": "LavarLosPlatos1"},
+		{"background": "res://Assets/2DAssets/Escenas2d/21.png"},
+	{"speaker": "Alba", "text": "Ey, mamá, ¿Por qué aguantas a papá? Siempre es así con todos…"},
+	{"speaker": "Madre", "text": "Ay hija, es todo normal, ya vas a ver cuando te cases."},
+	{"speaker": "Alba", "text": "¿Y si no quiero entender?"},
+	{"background": "res://Assets/2DAssets/Escenas2d/22.png"},
+	{"speaker": "Madre", "text": "Bueno, de una u otra forma te vas a acostumbrar."},
+	{"choices":
+		[
+		{"text": "Tallar madera", "goto": "Tallar madera", "set_flags": {"cuchillo": true}},
+		],
+	},
+	
+	{"anchor": "LavarLosPlatos2"},
+		{"background": "res://Assets/2DAssets/Escenas2d/21.png"},
+	{"speaker": "Alba", "text": "Ey, mamá, ¿Por qué aguantas a papá? Siempre es así con todos…"},
+	{"background": "res://Assets/2DAssets/Escenas2d/22.png"},
+	{"speaker": "Madre", "text": "Ay hija, es todo normal, ya vas a ver cuando te cases."},	
+	{"speaker": "Alba", "text": "Ok, si vos lo decis..."},
+	{"speaker": "Alba", "text": "(Espero que ese momento se tarde...)"},
+	{"choices":
+		[
+		{"text": "Salir con Tito", "goto": "Salir con Tito"},
+		],
+	},
+	
+	{"anchor": "Tallar madera"},
+		{"background": "res://Assets/2DAssets/Escenas2d/23.png"},
+	{"speaker": "Narradora", "text": "Se ven sus manos sosteniendo un trozo de madera y un cuchillo. Le corta pequeños trozos para darle forma."},
+		{"background": "res://Assets/2DAssets/Escenas2d/24.png"},
+	{"speaker": "Alba", "text": "Alba: Ni que fuera tan difícil trabajar con madera…"},
+	{"choices":
+		[
+		{"text": "Salir con Tito", "goto": "Salir con Tito"},
+		],
+	},
+	
+	{"anchor": "Salir con Tito"},
+		{"background": "res://Assets/2DAssets/Escenas2d/25.png"},
+	{"speaker": "Narradora", "text": "Alba y su hermano salen a la calle. Unos tipos catcallean a Alba. Su hermano mira hacia abajo pero no dice nada."},
+		{"background": "res://Assets/2DAssets/Escenas2d/26.png"},
+	{"speaker": "Alba", "text": "Qué tipos tan asquerosos, Tito ¿Por qué no les dijiste nada? Solés decir que sos mi protector…"},
+	{"speaker": "Tito", "text": "Papá dice que si no te vistieras así no te dirían nada."},
+	{"choices":
+		[
+		{"text": "Defenderse", "goto": "Defenderse"},
+		{"text": "Guardar silencio", "goto": "Guardar silencio"}
+		],
+	},
+	
+	{"anchor": "Guardar silencio"},
+	{"speaker": "Alba", "text": "¿Papá dijo eso, eh?"},
+		{"background": "res://Assets/2DAssets/Escenas2d/27.png"},
+	{"speaker": "Narradora", "text": "Alba mira sus pies."},
+	{"goto": "Mandados"},
+	
+	{"anchor": "Defenderse"},
+		{"background": "res://Assets/2DAssets/Escenas2d/26.png"},
+	{"speaker": "Alba", "text": "¿Vestirme cómo? ¿Qué nunca vieron rodillas en su vida?"},	
+	
+	{"anchor": "Mandados"},
+	{"speaker": "Narradora", "text": "El padre aparece buscando al hermano."},
+		{"background": "res://Assets/2DAssets/Escenas2d/28.png"},
+	{"speaker": "Padre", "text": "¡Ahí estás, Tito! Ya es hora de irnos. Y vos, mejor volvé a casa."},
+		{"background": "res://Assets/2DAssets/Escenas2d/29.png"},
+	{"speaker": "Alba", "text": "¿Seguro? Mirá que todavía no terminamos los mandados"},
+	{"speaker": "Tito", "text": "Alba, papá tiene razón, estás mejor en casa hoy."},
+	{"speaker": "Alba", "text": "¿Cómo que “hoy”?"},
+	{"speaker": "Tito", "text": " Andá a casa nomás…"},
+		{"background": "res://Assets/2DAssets/Escenas2d/34.png"},
+	{"speaker": "Narradora", "text": "Alba regresa a casa. En el camino, aparece una luz roja entre los árboles."},
+		{"background": "res://Assets/2DAssets/Escenas2d/35.png"},
+	{"speaker": "Alba", "text": "¿Qué carajos?"},
+	{"escena3D": ""},
+	{"speaker": "Narradora", "text": "Ella sigue la luz. Atraviesa unos arbustos y ve a unos hombres “bailando” sin camisa, cubiertos de pintura y haciendo gritos."},
+	{"speaker": "Narradora", "text": "Entonces uno de ellos se voltea hacia ella y ve su rostro distorsionado. Cuando le habla, ve que tiene el rostro de un buitre."},
+	{"speaker": "Padre", "text": "¡Alba! ¡Te dije que te quedes en casa!"},
+	{"speaker": "Alba", "text": "¿Papá? ¿Qué está pasando?"},
+	{"speaker": "Buitre1", "text": "¡Dejá hermano! ¡Que la niña se quede si quiere!"},
+	{"speaker": "Buitre2", "text": "¡Sí! ¡Que se quede! ¡Que se quede!"},
+	{"speaker": "Alba", "text": "¿Qué? ¿Qué pasa?"},
+	{"speaker": "Tito", "text": "Alba… anda a casa, estás mejor ahí…"},
+	{"speaker": "Alba", "text": "¿Tito? ¿Sos vos?"},
+	{"speaker": "Tito", "text": "Andate nomás…"},
+	{"speaker": "Narradora", "text": "El buitre gordo se acerca."},
+	{"speaker": "Buitre1", "text": "Tranquila niña, todo va a estar bien…"},
+	{"goto": "Condicional2"},
+	
+	{"anchor": "Condicional2",
+	"conditions": [
+		{"if": {"cuchillo": true}, "goto": "ChoiceAtacar"}
+	],
+		"default": "ChoiceCorrer"
+	},
+	
+	{"anchor": "ChoiceCorrer"},
+	{"choices":
+		[
+		{"text": "Correr", "goto": "Correr"}
+		],
+	},
+	
+	{"anchor": "ChoiceAtacar"},
+	{"choices":
+		[
+		{"text": "Atacar", "goto": "Atacar"}
+		]
+	},
+	
+	{"anchor": "Atacar"},
+	{"speaker": "Narradora", "text": "Alba lo apuñala con el cuchillo que usaba para tallar. El buitre intenta morderla y la rasguña, pero ella lo vuelve a apuñalar y escapa."},
+		{"background": "res://Assets/2DAssets/Escenas2d/Escaneos/1.jpg"},
+	{"speaker": "Liebre", "text": "Oye niña, ¿adónde vas? ¡Te vas a perder la diversión!"},
+		{"background": "res://Assets/2DAssets/Escenas2d/Escaneos/3.jpg"},
+	{"speaker": "Narradora", "text": "Sigue al conejo, pero una silueta se lanza sobre éste."},
+		{"background": "res://Assets/2DAssets/Escenas2d/Escaneos/4.jpg"},
+	{"speaker": "Voz", "text": "¡Ahí estás!"},
+	{"goto": "Correr"},
+	
+	{"anchor": "Correr"},
+	{"speaker": "Narradora", "text": "Alba corre a su casa."},
+	{"speaker": "Narradora", "text": "Alba llega a casa. Su mamá la está esperando."},
+	{"speaker": "Madre", "text": "¿Dónde estabas? Ya me estaba preocupando."},
+	{"speaker": "Alba", "text": "Yo… Mamá… Tengo miedo…"},
+	{"speaker": "Madre", "text": "¿Qué pasó nena?"},
+	{"speaker": "Narradora", "text": "Entran el padre y el hermano convertidos en buitres."},
+	{"speaker": "Padre", "text": "Lo que pasó es que andaba por donde no debía."},
+	{"speaker": "Madre", "text": "Amor, ¿no me digas que...?"},
+	{"speaker": "Padre", "text": "Sí, vamos a arreglar esto."},
+	{"speaker": "Alba", "text": "¿De qué hablan?"},
+	{"speaker": "Padre", "text": "… Ya vas a ver, vos quedate en casa cuando te dicen nomás."},
+	{"speaker": "Alba", "text": "¿Tito? Vos no…"},
+	{"speaker": "Tito", "text": "Silencio Alba, andate a dormir."},
+	{"speaker": "Narradora", "text": "Todos se van excepto la mamá, que se apoya en una mesa cercana."},
+	{"speaker": "Madre", "text": "Alba, te estás metiendo en un lío, y es mejor que pienses bien lo que vas a hacer ahora."},
+	{"speaker": "Narradora", "text": "Ella se va, y Alba ve una billetera en la mesa en la que se apoyaba, la revisa y tiene plata, una nota con horarios de colectivo y un pasaje."},
+	{"choices":
+		[
+		{"text": "Quedarse", "goto": "Final malo"},
+		{"text": "Escapar", "goto": "Condicional3"}
+		],
+	},
+	
+	{"anchor": "Condicional3",
+	"conditions": [
+		{"if": {"cuchillo": true}, "goto": "Escapar"}
+	],
+		"escena3D": ""
+	},
+	
+	{"anchor": "Escapar"},
+	{"anchor": "EventoPecari"},
+		{"background": "res://Assets/2DAssets/Escenas2d/Escaneos/5.jpg"},
+	{"speaker": "Pecari", "text": "¡Oye, lejos de mis crias!"},
+	{"speaker": "Alba", "text": "Lo siento, señora…"},
+	{"speaker": "Pecari", "text": "Qué va con esta niña… no respeta las reglas… no respeta las crías…"},
+	{"speaker": "Alba", "text": "¡Sí respeto a las crías!"},
+	{"speaker": "Pecari", "text": "¿Y por qué no tienes las tuyas?"},
+	{"choices":
+		[
+		{"text": "Acusarla de metiche", "goto": "Cuestionar"},
+		{"text": "Responderle", "goto": "Final bueno"}
+		],
+	},
+	
+	{"anchor": "Cuestionar"},
+	{"speaker": "Alba", "text": "¿Y por qué no te metés en tus asuntos?"},
+		{"background": "res://Assets/2DAssets/Escenas2d/Escaneos/6.jpg"},
+	{"speaker": "Narradora", "text": "El pecari se va. Alba camina un poco más."},
+	{"escena3D": ""},
+	{"anchor": "EventoCiervo"},
+			{"background": "res://Assets/2DAssets/Escenas2d/Escaneos/10.jpg"},
+	{"speaker": "Ciervo", "text": "Niña, debes ir con cuidado, no llames la atención a ti misma en un lugar como este."},
+	{"choices":
+		[
+		{"text": "Agradecerle", "goto": "Agradecer"},
+		{"text": "Retrucarlo", "goto": "Final bueno"}
+		],
+	},
+	
+	{"anchor": "Final bueno"},
+	{"speaker": "Narradora", "text": "Alba sigue la luz roja, que resulta ser el amanecer detrás de la parada de colectivos. Llega un bondi y le habla la conductora."},
+	{"speaker": "Conductora", "text": "Buenos días señorita, ¿sube?"},
+	{"speaker": "Alba", "text": "..."},
+	{"speaker": "Alba", "text": "Sí."},
+	{"speaker": "Conductora", "text": "Muy bien, ¿hoy tenemos un bonito día no? Muy tranquilo y despejado."},
+	{"speaker": "Alba", "text": "Esperemos que sí."},
+	{"speaker": "Conductora", "text": "¿Necesitás ayuda?"},
+	{"speaker": "Alba", "text": "... Sí."},
+	{"speaker": "Alba", "text": "Gracias."},
+	{"end": ""},
+	
+	{"anchor": "Agradecer"},
+	{"speaker": "Alba", "text": "Gracias, mantendré un perfil bajo."},
+			{"background": "res://Assets/2DAssets/Escenas2d/Escaneos/11.jpg"},
+	{"speaker": "Narradora", "text": "El ciervo alza la nariz y se va."},
+			
+	{"escena3D": ""},
+	{"anchor": "EventoZorro"},
+	{"background": "res://Assets/2DAssets/Escenas2d/Escaneos/7.jpg"},
+	{"speaker": "Zorro", "text": "¡Ey, niña! ¿Me ayudas? Perdí una cosa importante, ¿no eres amable con el prójimo?"},
+	{"choices":
+		[
+		{"text": "Dudar del zorro", "goto": "Alejarse"},
+		{"text": "Ayudarlo", "goto": "Final bueno"}
+		],
+	},
+	
+	{"anchor": "Alejarse"},
+			{"background": "res://Assets/2DAssets/Escenas2d/Escaneos/8.jpg"},
+	{"speaker": "Narradora", "text": "El zorro intenta morderla, y ella lo patea."},
+		{"background": "res://Assets/2DAssets/Escenas2d/Escaneos/8.jpg"},
+	{"speaker": "Narradora", "text": "El zorro intenta morderla, y ella lo patea."},
+	{"escena3D": ""},
+	{"anchor": "EventoLechuza"},
+		{"background": "res://Assets/2DAssets/Escenas2d/Escaneos/12.jpg"},
+	{"speaker": "Lechuza", "text": "Disculpe, señorita..."},
+	{"speaker": "Alba", "text": "... ¿Me habla a mí?"},
+	{"speaker": "Lechuza", "text": "¿Qué otra señorita hay por aquí?"},
+	{"speaker": "Alba", "text": "Supongo que solo yo... entonces, ¿qué quiere?"},
+	{"speaker": "Lechuza", "text": "Vaya señorita, esa no es la pregunta, más bien, ¿qué le hace falta a usted? ¿Le hace falta un compañero? Un defensor? O solo necesita compañía y defensa?"},
+	{"choices":
+		[
+		{"text": "“De momento, estoy bien así.”", "goto": "Final bueno"},
+		{"text": "“No quiero necesitar esas cosas...”", "goto": "Negarlo"}
+		],
+	},
+	
+	{"anchor": "Negarlo"},
+	{"speaker": "Lechuza", "text": "Esa, señorita, es una buena respuesta."},
+		{"background": "res://Assets/2DAssets/Escenas2d/Escaneos/13.jpg"},
+	{"speaker": "Narradora", "text": "La lechuza se va volando, dejando plumas atrás."},
+	{"goto": "Final locura"},
+	
+	{"anchor": "Final locura"},
+	{"escena3D": ""},
+	{"speaker": "Narradora", "text": "Alba sigue la luz roja, que resulta ser la luna. Ve su reflejo en un pequeño charco, desprolijo y con plumas en su cabello, sonríe, saca el cuchillo y se da vuelta. Se escucha el sonido de una lechuza."},
+	{"speaker": "Alba", "text": "..."},
+	{"speaker": "Alba", "text": "Eso fue extraño..."},
+	{"end": ""},
+	
+	{"anchor": "Final malo"},	
+	{"speaker": "Narradora", "text": "Alba guarda la billetera en un cajón y se va a dormir."},
+	{"speaker": "Narradora", "text": "Se despierta al día siguiente. Se dirige a la cocina y toda su familia está reunida."},
+	{"speaker": "Alba", "text": "Buenos días, ¿por qué todos tan temprano?"},
+	{"speaker": "Padre", "text": "Alba, vamos al grano. Te estás portando muy rebelde y desagradecida, no es lo que una chica apropiada hace, pero ya tenemos la solución."},
+	{"speaker": "Alba", "text": "¿Qué? Pero…"},
+	{"speaker": "Padre", "text": "Silencio. Escuchame bien cuando te digo que tenés que hacer caso, porque a tu marido no le va a dar igual."},
+	{"speaker": "Alba", "text": "¡¿Marido?!"},
+	{"speaker": "Padre", "text": "Sí, Alba, te vas a casar."},
+	{"speaker": "Alba", "text": "... ¿Qué?"},
+	{"end": ""},
+]

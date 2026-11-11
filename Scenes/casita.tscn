@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dgfm4k31yw7q2"]
+
+[ext_resource type="PackedScene" uid="uid://7u636eatfiiv" path="res://Assets/3DModels/Fondos y decoracion/Casa/Casita.glb" id="1_txydj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_20k3m"]
+size = Vector3(8.025513, 4.1032715, 5.8062744)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c1rky"]
+size = Vector3(1, 1.4697876, 6.048584)
+
+[node name="Casita" unique_id=1655938418 instance=ExtResource("1_txydj")]
+
+[node name=" Casita_001" parent="." index="0" unique_id=1006312667]
+lod_bias = 0.1
+
+[node name="StaticBody3D" type="StaticBody3D" parent=" Casita_001" index="0" unique_id=472759268]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent=" Casita_001/StaticBody3D" index="0" unique_id=667097840]
+transform = Transform3D(1, 0, 8.351871e-23, 0, 1, 0, 8.3518705e-23, 0, 1, 0.021301486, -0.0013429389, 2.7832112)
+shape = SubResource("BoxShape3D_20k3m")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent=" Casita_001/StaticBody3D" index="1" unique_id=2128122934]
+transform = Transform3D(1, 0, 8.351871e-23, 0, 1, 0, 8.3518705e-23, 0, 1, 4.030687, 0.21737649, 2.7899168)
+shape = SubResource("BoxShape3D_c1rky")

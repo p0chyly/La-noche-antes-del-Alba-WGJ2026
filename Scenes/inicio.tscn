@@ -1,0 +1,192 @@
+[gd_scene format=3 uid="uid://xbtohpajqt16"]
+
+[ext_resource type="Script" uid="uid://dpvrtolssuc1l" path="res://Scripts/inicio.gd" id="1_r8dgm"]
+[ext_resource type="FontFile" uid="uid://b6pnpr5u0kkik" path="res://Assets/Fonts/Witchwoode-Regular.ttf" id="2_47xpm"]
+[ext_resource type="Texture2D" uid="uid://h2jpnusddskp" path="res://Assets/2DAssets/portadaInicio.png" id="4_dcnhq"]
+[ext_resource type="FontFile" uid="uid://uqwtm8g4fa4r" path="res://Assets/Fonts/AppleGaramond.ttf" id="5_tc7wo"]
+[ext_resource type="FontFile" uid="uid://duhe1didsud5j" path="res://Assets/Fonts/AppleGaramond-BoldItalic.ttf" id="6_6vjke"]
+[ext_resource type="FontFile" uid="uid://d6wnxbqwuu74" path="res://Assets/Fonts/MetalGothic-DemoVersion-Regular.ttf" id="6_i0jdo"]
+[ext_resource type="FontFile" uid="uid://dqmqebugjx0jv" path="res://Assets/Fonts/AppleGaramond-Italic.ttf" id="7_an1y4"]
+[ext_resource type="Texture2D" uid="uid://s2b1x3rtlh14" path="res://Assets/2DAssets/wgjicon.png" id="7_i0jdo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kv7mu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtyot"]
+bg_color = Color(1, 1, 1, 0.23529412)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qtyot"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i0jdo"]
+bg_color = Color(1, 1, 1, 0.23529412)
+
+[node name="Inicio" type="Control" unique_id=1587041936]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r8dgm")
+
+[node name="Label" type="Label" parent="." unique_id=967399197]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -457.0
+offset_top = -459.0
+offset_right = 454.0
+offset_bottom = -351.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("2_47xpm")
+theme_override_font_sizes/font_size = 90
+text = "La noche antes del Alba"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=487099910]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -809.0
+offset_top = -159.0
+offset_right = -569.0
+offset_bottom = 159.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1681654251]
+layout_mode = 2
+
+[node name="Jugar" type="Button" parent="VBoxContainer/MarginContainer" unique_id=694312412]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.86, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_i0jdo")
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kv7mu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qtyot")
+text = "Jugar"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=704403479]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="Creditos" type="Button" parent="VBoxContainer/MarginContainer2" unique_id=185333786]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.86, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_i0jdo")
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kv7mu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qtyot")
+text = "Créditos"
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer" unique_id=1803442858]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="Salir" type="Button" parent="VBoxContainer/MarginContainer3" unique_id=1613662333]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.86, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_i0jdo")
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kv7mu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qtyot")
+text = "Salir"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1887162808]
+layer = -5
+
+[node name="Fondo" type="TextureRect" parent="CanvasLayer" unique_id=1251249598]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 128.0
+offset_bottom = 70.888916
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.94, 0.94)
+texture = ExtResource("4_dcnhq")
+expand_mode = 2
+
+[node name="Créditos" type="Control" parent="." unique_id=1317790669]
+visible = false
+layout_mode = 1
+anchors_preset = 0
+offset_left = -49.0
+offset_top = 41.0
+offset_right = -9.0
+offset_bottom = 81.0
+
+[node name="X" type="Button" parent="Créditos" unique_id=161802099]
+layout_mode = 0
+offset_left = 1745.0
+offset_top = 171.0
+offset_right = 1795.0
+offset_bottom = 221.0
+theme_override_colors/font_hover_color = Color(0.85882354, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_i0jdo")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qtyot")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i0jdo")
+text = "X"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Créditos" unique_id=1219433676]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1490.0
+offset_top = 160.0
+offset_right = 1724.0
+offset_bottom = 890.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/selection_color = Color(0.41, 0.3362, 0.3116, 0.39607844)
+theme_override_fonts/normal_font = ExtResource("5_tc7wo")
+theme_override_fonts/bold_font = ExtResource("6_i0jdo")
+theme_override_fonts/bold_italics_font = ExtResource("6_6vjke")
+theme_override_fonts/italics_font = ExtResource("7_an1y4")
+theme_override_font_sizes/normal_font_size = 35
+theme_override_font_sizes/bold_font_size = 70
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+theme_override_icons/horizontal_rule = ExtResource("7_i0jdo")
+bbcode_enabled = true
+text = "[b]Créditos[/b]
+
+[i][u]Arte 2D[/u][/i]
+Serena Boff
+Dirhaele
+Marcela P.
+Lone Jester
+Sofia Cigarroa
+
+[i][u]Arte 3D[/u][/i]
+Nat Miret
+Sofia Cigarroa
+
+[i][u]Programación[/u][/i]
+Maitena Pochyly"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Créditos/RichTextLabel" unique_id=2094565122]
+position = Vector2(141, 722)
+scale = Vector2(0.107194245, 0.107194245)
+texture = ExtResource("7_i0jdo")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=913832241]
+
+[connection signal="pressed" from="VBoxContainer/MarginContainer/Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer3/Salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="Créditos/X" to="." method="_on_creditos_pressed"]

@@ -1,0 +1,44 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bqa8wncmc7wsa"
+path.s3tc="res://.godot/imported/AlbaAnimations4_AlbaColor6.jpg-84199cba4e448364a01368b689fd697e.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "6a30352cbe5e3cfd59ab8eafc1d9fc68"
+}
+
+[deps]
+
+source_file="res://Assets/3DModels/Alba/AlbaAnimations4_AlbaColor6.jpg"
+dest_files=["res://.godot/imported/AlbaAnimations4_AlbaColor6.jpg-84199cba4e448364a01368b689fd697e.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

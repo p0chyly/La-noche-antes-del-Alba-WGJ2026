@@ -1,0 +1,163 @@
+[gd_scene format=3 uid="uid://c8foqmul8fcdo"]
+
+[ext_resource type="Script" uid="uid://dpvrtolssuc1l" path="res://Scripts/inicio.gd" id="1_obja6"]
+[ext_resource type="FontFile" uid="uid://b6pnpr5u0kkik" path="res://Assets/Fonts/Witchwoode-Regular.ttf" id="2_av7qe"]
+[ext_resource type="FontFile" uid="uid://dqmqebugjx0jv" path="res://Assets/Fonts/AppleGaramond-Italic.ttf" id="2_r78yx"]
+[ext_resource type="Texture2D" uid="uid://h2jpnusddskp" path="res://Assets/2DAssets/portadaInicio.png" id="3_r78yx"]
+[ext_resource type="FontFile" uid="uid://d6wnxbqwuu74" path="res://Assets/Fonts/MetalGothic-DemoVersion-Regular.ttf" id="4_e27de"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_g16b2"]
+blend_mode = 3
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kv7mu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtyot"]
+bg_color = Color(1, 1, 1, 0.23529412)
+
+[node name="PantallaFinal" type="Control" unique_id=284067195]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Inicio" type="Control" parent="." unique_id=1587041936]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_obja6")
+
+[node name="Label2" type="Label" parent="Inicio" unique_id=2102942042]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -455.5
+offset_top = -334.0
+offset_right = 455.5
+offset_bottom = -226.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("2_r78yx")
+theme_override_font_sizes/font_size = 50
+text = "¿Y? ¿Lo volverías a intentar?"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Inicio" unique_id=967399197]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -457.0
+offset_top = -459.0
+offset_right = 454.0
+offset_bottom = -351.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("2_av7qe")
+theme_override_font_sizes/font_size = 90
+text = "La noche antes del Alba"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Inicio" unique_id=487099910]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -809.0
+offset_top = -159.0
+offset_right = -569.0
+offset_bottom = 159.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Inicio" unique_id=1887162808]
+layer = -5
+
+[node name="Fondo" type="TextureRect" parent="Inicio/CanvasLayer" unique_id=1251249598]
+material = SubResource("CanvasItemMaterial_g16b2")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 128.0
+offset_bottom = 70.888916
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.94, 0.94)
+texture = ExtResource("3_r78yx")
+expand_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1399821967]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -575.0
+offset_top = -174.0
+offset_right = 575.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 80
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=1681654251]
+layout_mode = 2
+
+[node name="VolverAJugar" type="Button" parent="HBoxContainer/MarginContainer" unique_id=694312412]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.86, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_e27de")
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kv7mu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qtyot")
+text = "Volver a jugar"
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer" unique_id=704403479]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="MenuDeInicio" type="Button" parent="HBoxContainer/MarginContainer2" unique_id=185333786]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.86, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_e27de")
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kv7mu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qtyot")
+text = "Menú principal"
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer" unique_id=1803442858]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="Salir" type="Button" parent="HBoxContainer/MarginContainer3" unique_id=1613662333]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.86, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_e27de")
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kv7mu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qtyot")
+text = "Salir del juego"
+
+[connection signal="pressed" from="HBoxContainer/MarginContainer/VolverAJugar" to="Inicio" method="_on_jugar_pressed"]
+[connection signal="pressed" from="HBoxContainer/MarginContainer2/MenuDeInicio" to="Inicio" method="menu_principal"]
+[connection signal="pressed" from="HBoxContainer/MarginContainer3/Salir" to="Inicio" method="_on_salir_pressed"]

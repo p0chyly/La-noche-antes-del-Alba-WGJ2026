@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dx0tljjebubr6"]
+
+[ext_resource type="FontFile" uid="uid://bwq11ebfektlf" path="res://Assets/Fonts/AppleGaramond-Bold.ttf" id="1_5nasq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5nasq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tx8f8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u4f53"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_klqe2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_md8jg"]
+
+[node name="opcion1" type="Button" unique_id=1022170921]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.95, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.5, 0.5, 1)
+theme_override_constants/h_separation = 50
+theme_override_fonts/font = ExtResource("1_5nasq")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5nasq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tx8f8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_u4f53")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_klqe2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_md8jg")
+text = "boton"

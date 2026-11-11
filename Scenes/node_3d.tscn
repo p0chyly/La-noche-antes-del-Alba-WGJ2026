@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c46h0t358ia0s"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_20k3m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_20k3m"]
+
+[node name="Node3D" type="Node3D" unique_id=1940898463]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=728875944]
+mesh = SubResource("BoxMesh_20k3m")
+surface_material_override/0 = SubResource("StandardMaterial3D_20k3m")

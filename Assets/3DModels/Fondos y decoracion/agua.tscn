@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://gs6xouhjept"]
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_nh568"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_wudrf"]
+frequency = 0.0001
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_jc0xf"]
+generate_mipmaps = false
+noise = SubResource("FastNoiseLite_wudrf")
+seamless = true
+seamless_blend_skirt = 1.0
+
+[sub_resource type="Gradient" id="Gradient_gmilc"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_l4vdr"]
+frequency = 0.03
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_l4vdr"]
+noise = SubResource("FastNoiseLite_l4vdr")
+color_ramp = SubResource("Gradient_gmilc")
+seamless = true
+as_normal_map = true
+seamless_blend_skirt = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tctdu"]
+transparency = 1
+albedo_color = Color(0.61447257, 0.8186246, 0.91653293, 1)
+albedo_texture = SubResource("NoiseTexture2D_jc0xf")
+roughness = 0.0
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_l4vdr")
+uv1_scale = Vector3(5, 5, 5)
+
+[node name="Node3D" type="Node3D" unique_id=213529615]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=277024984]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0126953125, 0, 0)
+mesh = SubResource("TubeTrailMesh_nh568")
+surface_material_override/0 = SubResource("StandardMaterial3D_tctdu")
